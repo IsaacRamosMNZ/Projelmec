@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aplicações | Projelmec</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/applications.css">
+  <link rel="stylesheet" href="assets/css/viewer-fixes.css">
+  <link rel="stylesheet" href="assets/css/triage-flow.css">
+</head>
+<body>
+  <div class="topline"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-icon">P</span>PROJELMEC</a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html">INÍCIO</a>
+        <a href="empresa.html">EMPRESA</a>
+        <a class="active" href="projetos.html">APLICAÇÕES</a>
+      </nav>
+      <a class="nav-cta" href="empresa.html#grupo">CONHEÇA O GRUPO</a>
+      <button class="menu" type="button" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="eyebrow">Aplicações</div>
+        <h1>Uma solução para cada etapa.</h1>
+        <p>Da chegada do resíduo à destinação final, o projeto organiza uma cadeia segura, rastreável e orientada ao reaproveitamento.</p>
+      </div>
+    </section>
+
+    <section class="section technical-section" id="visualizador" aria-labelledby="viewer-title">
+      <div class="container">
+        <div class="heading technical-heading">
+          <div class="eyebrow">Projeto da esteira</div>
+          <h2 id="viewer-title">Explore o equipamento em detalhes.</h2>
+          <p>Alterne entre as vistas do modelo e selecione os marcadores para conhecer os componentes principais da linha de separação.</p>
+        </div>
+
+        <div class="technical-viewer" data-technical-viewer>
+          <div class="viewer-toolbar">
+            <div class="viewer-tabs" role="group" aria-label="Selecionar vista do equipamento">
+              <button class="viewer-tab is-active" type="button" data-view="top" aria-pressed="true">Superior</button>
+              <button class="viewer-tab" type="button" data-view="front" aria-pressed="false">Frontal</button>
+              <button class="viewer-tab" type="button" data-view="rear" aria-pressed="false">Traseira</button>
+              <button class="viewer-tab" type="button" data-view="perspective" aria-pressed="false">Perspectiva</button>
+            </div>
+            <p class="viewer-hint"><span aria-hidden="true">+</span> Clique nos pontos técnicos</p>
+          </div>
+
+          <div class="viewer-layout">
+            <div class="viewer-stage" aria-live="polite">
+              <figure class="viewer-view is-active" data-view-panel="top">
+                <picture><source srcset="assets/media/projetos/esteira-vista-superior.webp" type="image/webp"><img src="assets/media/projetos/WhatsApp Image 2026-08-31 at 16.38.47 (1).jpeg" alt="Vista superior da esteira de separação" width="710" height="347" decoding="async" fetchpriority="high"></picture>
+                <button class="hotspot" type="button" style="--x:47%; --y:35%;" data-part="belt" aria-label="Ver detalhes da esteira"><span>Esteira</span></button>
+                <button class="hotspot" type="button" style="--x:66%; --y:28%;" data-part="sensors" aria-label="Ver detalhes dos sensores"><span>Sensores</span></button>
+                <button class="hotspot" type="button" style="--x:83%; --y:24%;" data-part="panel" aria-label="Ver detalhes do painel"><span>Painel</span></button>
+                <button class="hotspot" type="button" style="--x:38%; --y:69%;" data-part="ramps" aria-label="Ver detalhes das rampas"><span>Rampas</span></button>
+              </figure>
+
+              <figure class="viewer-view" data-view-panel="front" hidden>
+                <picture><source srcset="assets/media/projetos/esteira-vista-frontal.webp" type="image/webp"><img src="assets/media/projetos/WhatsApp Image 2026-08-31 at 16.38.46.jpeg" alt="Vista frontal da esteira de separação" width="681" height="371" decoding="async"></picture>
+                <button class="hotspot" type="button" style="--x:49%; --y:57%;" data-part="belt" aria-label="Ver detalhes da esteira"><span>Esteira</span></button>
+                <button class="hotspot" type="button" style="--x:64%; --y:38%;" data-part="sensors" aria-label="Ver detalhes dos sensores"><span>Sensores</span></button>
+                <button class="hotspot" type="button" style="--x:84%; --y:46%;" data-part="panel" aria-label="Ver detalhes do painel"><span>Painel</span></button>
+                <button class="hotspot" type="button" style="--x:36%; --y:70%;" data-part="ramps" aria-label="Ver detalhes das rampas"><span>Rampas</span></button>
+              </figure>
+
+              <figure class="viewer-view" data-view-panel="rear" hidden>
+                <picture><source srcset="assets/media/projetos/esteira-vista-traseira.webp" type="image/webp"><img src="assets/media/projetos/WhatsApp Image 2026-08-31 at 16.38.47 (2).jpeg" alt="Vista traseira da esteira de separação" width="577" height="268" decoding="async"></picture>
+                <button class="hotspot" type="button" style="--x:50%; --y:48%;" data-part="belt" aria-label="Ver detalhes da esteira"><span>Esteira</span></button>
+                <button class="hotspot" type="button" style="--x:28%; --y:29%;" data-part="sensors" aria-label="Ver detalhes dos sensores"><span>Sensores</span></button>
+                <button class="hotspot" type="button" style="--x:12%; --y:44%;" data-part="panel" aria-label="Ver detalhes do painel"><span>Painel</span></button>
+                <button class="hotspot" type="button" style="--x:59%; --y:66%;" data-part="ramps" aria-label="Ver detalhes das rampas"><span>Rampas</span></button>
+              </figure>
+
+              <figure class="viewer-view" data-view-panel="perspective" hidden>
+                <picture><source srcset="assets/media/projetos/esteira-perspectiva.webp" type="image/webp"><img src="assets/media/projetos/WhatsApp Image 2026-08-31 at 16.38.47.jpeg" alt="Perspectiva geral da esteira de separação" width="933" height="662" decoding="async"></picture>
+                <button class="hotspot" type="button" style="--x:48%; --y:49%;" data-part="belt" aria-label="Ver detalhes da esteira"><span>Esteira</span></button>
+                <button class="hotspot" type="button" style="--x:67%; --y:29%;" data-part="sensors" aria-label="Ver detalhes dos sensores"><span>Sensores</span></button>
+                <button class="hotspot" type="button" style="--x:78%; --y:27%;" data-part="panel" aria-label="Ver detalhes do painel"><span>Painel</span></button>
+                <button class="hotspot" type="button" style="--x:47%; --y:74%;" data-part="ramps" aria-label="Ver detalhes das rampas"><span>Rampas</span></button>
+              </figure>
+            </div>
+
+            <aside class="technical-info" aria-live="polite">
+              <div class="technical-info-label">Componente em destaque</div>
+              <div class="technical-info-icon" data-info-icon aria-hidden="true">↔</div>
+              <h3 data-info-title>Esteira transportadora</h3>
+              <p data-info-copy>Conduz os materiais pela linha de triagem com fluxo contínuo e organizado.</p>
+              <div class="technical-info-status"><span></span> Selecione outro ponto para explorar</div>
+            </aside>
+          </div>
+        </div>
+
+        <div class="technical-legend" aria-label="Componentes destacados">
+          <span><i></i> Esteira transportadora</span>
+          <span><i></i> Sensores de identificação</span>
+          <span><i></i> Painel de controle</span>
+          <span><i></i> Rampas de separação</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="triage-flow" id="fluxo-triagem" aria-labelledby="flow-title">
+      <div class="container">
+        <div class="flow-heading">
+          <div class="eyebrow">Fluxo da triagem</div>
+          <h2 id="flow-title">Do recebimento ao destino correto.</h2>
+          <p>Uma sequência visual que explica o percurso do material dentro da linha de separação.</p>
+        </div>
+        <ol class="flow-steps">
+          <li class="flow-step">
+            <span class="flow-number">01</span>
+            <div class="flow-icon" aria-hidden="true">↓</div>
+            <h3>Recebimento</h3>
+            <p>Os materiais entram na área de triagem para iniciar o processo.</p>
+          </li>
+          <li class="flow-step">
+            <span class="flow-number">02</span>
+            <div class="flow-icon" aria-hidden="true">⌁</div>
+            <h3>Identificação</h3>
+            <p>Os sensores acompanham a passagem dos itens pela esteira.</p>
+          </li>
+          <li class="flow-step">
+            <span class="flow-number">03</span>
+            <div class="flow-icon" aria-hidden="true">↔</div>
+            <h3>Triagem</h3>
+            <p>A esteira conduz o fluxo de forma contínua e organizada.</p>
+          </li>
+          <li class="flow-step">
+            <span class="flow-number">04</span>
+            <div class="flow-icon" aria-hidden="true">↘</div>
+            <h3>Direcionamento</h3>
+            <p>As rampas encaminham cada material ao ponto de coleta correto.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand footer-brand"><span class="brand-icon">P</span>PROJELMEC</div>
+        <nav class="footer-links"><a href="index.html">Início</a><a href="empresa.html">Empresa</a><a href="projetos.html">Aplicações</a></nav>
+      </div>
+      <p>PROJETO ACADÊMICO • GESTÃO DE RESÍDUOS • 2026</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/technical-viewer.js"></script>
+</body>
+</html>
