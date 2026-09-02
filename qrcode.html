@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR Code | Projelmec</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/qrcode.css">
+</head>
+<body>
+  <div class="topline"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-icon">P</span>PROJELMEC</a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html">INÍCIO</a>
+        <a href="empresa.html">EMPRESA</a>
+        <a href="projetos.html">APLICAÇÕES</a>
+        <a class="active" href="qrcode.html">QR CODE</a>
+      </nav>
+      <a class="nav-cta" href="empresa.html#grupo">CONHEÇA O GRUPO</a>
+      <button class="menu" type="button" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="qr-page">
+      <div class="container qr-layout">
+        <div class="qr-copy">
+          <div class="eyebrow">Acesso rápido</div>
+          <h1>Leve o projeto com você.</h1>
+          <p>Aponte a câmera do celular para acessar a apresentação completa da Projelmec, incluindo o visualizador técnico da esteira.</p>
+          <a class="button" href="https://isaacramosmnz.github.io/Projelmec/index.html" target="_blank" rel="noopener">ABRIR O PROJETO</a>
+          <a class="qr-url" href="https://isaacramosmnz.github.io/Projelmec/index.html" target="_blank" rel="noopener">isaacramosmnz.github.io/Projelmec</a>
+        </div>
+        <div class="qr-panel">
+          <div class="qr-frame"><div class="qr-code" role="img" aria-label="QR Code para abrir o site do projeto Projelmec" data-qr-code></div></div>
+          <p>Escaneie para abrir no navegador</p>
+          <button class="qr-download" type="button" data-download-qr style="background:#fff;cursor:pointer">BAIXAR QR CODE</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">PROJELMEC</div>
+        <div class="footer-links"><a href="empresa.html">Empresa</a><a href="projetos.html">Aplicações</a><a href="qrcode.html">QR Code</a></div>
+      </div>
+      <div class="copyright">PROJETO ACADÊMICO • GESTÃO DE RESÍDUOS • 2026</div>
+    </div>
+  </footer>
+  <script>
+    (() => {
+      const rows = `
+11111110000100001011101111111
+10000010111010110100001000001
+10111010011000100001101011101
+10111010101001100101001011101
+10111010000101001111001011101
+10000010111010111010001000001
+11111110101010101010101111111
+00000000010010001001000000000
+11111011110111100101110101010
+00110001100101001001111110001
+11100111101010110000010110000
+10110001000100100011101011010
+01111010011111111101000001100
+01001100000110001111101110001
+10110010010010110010110111100
+10011101011010110010111010010
+00101010011101111101000001100
+10000101101100011001111110101
+10010010001001011000110100100
+10011101111000101001000010010
+10111110000011000100111110111
+00000000110101000011100011111
+11111110100011111111101011100
+10000010010000101011100010010
+10111010110011100110111110100
+10111010111101001111100101101
+10111010101010011101111111110
+10000010110100110010101111010
+11111110100111100101000000100`.trim().split('\n');
+      const namespace = 'http://www.w3.org/2000/svg';
+      const svg = document.createElementNS(namespace, 'svg');
+      svg.setAttribute('viewBox', '-4 -4 37 37');
+      svg.setAttribute('xmlns', namespace);
+      svg.setAttribute('role', 'img');
+      svg.setAttribute('aria-label', 'QR Code para abrir o site do projeto Projelmec');
+      svg.style.cssText = 'display:block;width:100%;height:auto';
+      const background = document.createElementNS(namespace, 'rect');
+      background.setAttribute('x', '-4'); background.setAttribute('y', '-4');
+      background.setAttribute('width', '37'); background.setAttribute('height', '37');
+      background.setAttribute('fill', '#fff');
+      const modules = document.createElementNS(namespace, 'path');
+      modules.setAttribute('fill', '#000');
+      modules.setAttribute('d', rows.flatMap((row, y) => [...row].map((bit, x) => bit === '1' ? `M${x} ${y}h1v1H${x}z` : '')).join(''));
+      svg.append(background, modules);
+      document.querySelector('[data-qr-code]').append(svg);
+      document.querySelector('[data-download-qr]').addEventListener('click', () => {
+        const source = new XMLSerializer().serializeToString(svg);
+        const url = URL.createObjectURL(new Blob([source], { type: 'image/svg+xml' }));
+        const download = document.createElement('a');
+        download.href = url; download.download = 'qrcode-projelmec.svg'; download.click();
+        URL.revokeObjectURL(url);
+      });
+    })();
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
